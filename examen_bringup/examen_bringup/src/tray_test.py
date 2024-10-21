@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from builtin_interfaces.msg import Duration
@@ -10,7 +12,7 @@ class TrajectoryTest(Node):
         topic_name = "/scara_trajectory_controller/joint_trajectory"
         self.trajectory_publisher = self.create_publisher(JointTrajectory, topic_name, 10)
         self.timer = self.create_timer(1, self.timer_callback)
-        self.joints = ['link_1_joint', 'link_2_joint', 'link_1_joint']
+        self.joints = ['link_1_joint', 'link_2_joint', 'link_3_joint']
         self.goal_positions = [1.911, 0.8322, -0.4118]
         self.get_logger().info('Controller is running and publishing to topic: {}'.format(topic_name))
 

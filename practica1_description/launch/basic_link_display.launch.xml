@@ -1,8 +1,8 @@
 <launch>
     <let name="urdf_path" 
-         value="$(find-pkg-share blink_description)/urdf/basic_link.urdf" />
+         value="$(find-pkg-share practica1_description)/urdf/basic_link.urdf" />
     <let name="rviz_config_path"
-         value="$(find-pkg-share blink_description)/rviz/basic_link_config.rviz" />
+         value="$(find-pkg-share practica1_description)/rviz/basic_link_config.rviz" />
 
     <node pkg="robot_state_publisher" exec="robot_state_publisher">
         <param name="robot_description"
